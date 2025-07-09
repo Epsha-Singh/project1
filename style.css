@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff8f0;
+  color: #333;
+}
+
+/* NAV SECTION */
+nav{
+  position: fixed;
+  width: 100vw;
+}
+.maindiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #d14d72;
+}
+.maindiv ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-left: 3px;
+    padding-right: 5px;
+}
+.maindiv ul li{
+    list-style: none;
+    border-right: 1px solid #bb3f66;
+    margin-left: 3px;
+    padding-right: 5px;
+    color: white;
+    font-weight: bolder;
+}
+.secdiv{
+  background-color: #df7093;
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;
+}
+.secdiv ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 200px;
+}
+.secdiv ul li{
+    list-style: none;
+height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.secdiv ul li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background-color: #bb3f66;
+  opacity: 0;
+}
+.secdiv ul li:hover::after {
+  left: 0;
+  opacity: 1;
+  transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 20px;
+  background: #ffe6e6;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  max-width: 400px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #d14d72;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 12px 24px;
+  background-color: #d14d72;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero button:hover {
+  background-color: #bb3f66;
+}
+
+.hero img {
+  max-width: 300px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+/* FEATURES */
+.features, .reviews, .faq {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.features h2, .reviews h2, .faq h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.feature-list, .review-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature, .review {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 250px;
+  font-size: 18px;
+}
+
+/* FAQ Section */
+.faq-item {
+  background: #fff;
+  padding: 15px 20px;
+  margin: 10px auto;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.faq-item h4 {
+  margin: 0 0 5px;
+  color: #d14d72;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #444;
+}
+
+/* FOOTER */
+footer {
+  background-color: #d14d72;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature, .review {
+    width: 100%;
+    max-width: 300px;
+  }
+}
